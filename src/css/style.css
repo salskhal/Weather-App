@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.container{
+    min-height: 100vh;
+    background-image: url("../img/anton-darius-ebHCU8n7G38-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 2rem 5rem;
+}
+
+.header{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.search{
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid white;
+    width: 50%;
+    margin-top: 3rem;
+}
+
+
+
+
+
+.search input{
+    padding: .5rem .4rem;
+    background: none;
+    outline: none;
+    flex-grow: 2;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.search input::placeholder{
+    color: lightcyan;
+}
+
+.search button{
+    padding: .5rem 1rem;
+    border: none;
+    background: skyblue;
+    color: white;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background: white;
+    color: skyblue;
+}
+
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-top: 3rem;
+    color: white;
+}
+
+
+.temp{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.weather{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.measure{
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    padding: 2rem 3rem;
+}
+
+
+.city-list{
+    border-bottom: 1px solid white;
+}
+
+
+.city{
+    margin-bottom: 1rem;
+    color: rgb(189, 189, 189);
+    cursor: pointer;
+    transition: all ease-in-out .25s;
+}
+.city:hover{
+    color: white;
+    font-weight: 500;
+}
+
+
+
+.weather-details{
+    margin-top: 2rem;
+}
+
+
+.weather-details li{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .container{
+        padding: 2rem 3rem;
+    }
+    .search{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        padding: 2rem 2rem;
+    }
+    .search{
+        width: 70%;
+    }
+    .content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  
+    .search{
+        width: 100%;
+    }
+}

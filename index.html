@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Weather.current</h2>
+        </div>
+
+        <!-- <div class="search">
+            <input type="text" name="" id="" placeholder="Another location">
+        </div> -->
+        <div class="search">
+            <input type="text" placeholder="Search City">
+            <button>Search</button>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <div class="display">
+                <h1 class="temp">
+                    16&#176C
+                </h1>
+                <div class="location-details">
+                    <h2 class="location-name">
+                        Lagos, <span class="country">Nigeria</span>
+                    </h2>
+                    <small>
+                        <span class="time">
+                            10:40 -
+                        </span>
+                        <span class="day">
+                            Friday Feb 05
+                        </span>
+                    </small>
+                    <div class="weather">
+                        <img src="./src/img/sun.png" alt="condition icon" width="50" height="50">
+                        <span class="conditon">Sunny</span>
+                    </div>
+                </div>
+            </div>
+            <div class="measure">
+                <ul class="city-list">
+                    <li class="city">Lagos</li>
+                    <li class="city">New York</li>
+                    <li class="city">London</li>
+                    <li class="city">Paris</li>
+                </ul>
+
+                <ul class="weather-details">
+                    <h3 class="details-header">Weather Details</h3>
+                    <li>
+                        <span>Humidity:</span>
+                        <span class="humidity">65%</span>
+                    </li>
+                    <li>
+                        <span>Wind:</span>
+                        <span class="humidity">24km/h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./src/js/main.js"></script>
+</body>
+
+</html>
