@@ -57,7 +57,7 @@ function setResult(){
 
 
 function fetchWeather(){
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityName}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityName}`)
     .then(res => res.json())
     .then(data =>{
         weatherInfo = {
