@@ -11,8 +11,13 @@ let wind = document.querySelector(".wind")
 let icon = document.querySelector(".icon")
 let cityInput = document.querySelector(".city-input")
 let dateOutput = document.querySelector(".date-output")
+let container = document.querySelector(".container")
 
 let fetchBtn = document.querySelector(".search-btn")
+
+
+let day = "'src/img/day.jpg'"
+let night = "'src/img/night.jpg'"
 
 
 let cityList = document.querySelectorAll(".city")
@@ -39,6 +44,10 @@ fetchBtn.addEventListener("click", ()=>{
     cityName = select
     
     fetchWeather()
+
+    app.style.opacity = "0"
+
+    cityInput.value = ""
 })
 
 
@@ -50,8 +59,15 @@ function setResult(){
     temperature.innerHTML = `${weatherInfo.temp}&#176C`
     humidity.innerHTML = `${weatherInfo.humidity}%`
     wind.innerHTML = `${weatherInfo.wind}km/h`
+    // container.style.backgroundImage = `url(${day})`
 
-   
+    if (weatherInfo.isday){
+        container.style.backgroundImage = `url(${day})`
+    } else{
+        container.style.backgroundImage = `url(${night})`
+    }
+
+    
 }
 
 
@@ -68,7 +84,8 @@ function fetchWeather(){
             src: data.current.condition.icon, //
             humidity: data.current.humidity,
             wind: data.current.wind_kph,
-            data: data.location.localtime
+            data: data.location.localtime,
+            isday: data.current.is_day
         }
 
         const date = data.location.localtime
