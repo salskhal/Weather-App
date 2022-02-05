@@ -19,8 +19,8 @@
             <input type="text" name="" id="" placeholder="Another location">
         </div> -->
         <div class="search">
-            <input type="text" placeholder="Search City">
-            <button>Search</button>
+            <input type="text" placeholder="Search City" class="city-input">
+            <button class="search-btn">Search</button>
         </div>
         <!-- Content -->
         <div class="content">
@@ -30,19 +30,14 @@
                 </h1>
                 <div class="location-details">
                     <h2 class="location-name">
-                        Lagos, <span class="country">Nigeria</span>
+                        Lagos, Nigeria
                     </h2>
-                    <small>
-                        <span class="time">
-                            10:40 -
-                        </span>
-                        <span class="day">
-                            Friday Feb 05
-                        </span>
+                    <small class="date-output">
+                        
                     </small>
                     <div class="weather">
-                        <img src="./src/img/sun.png" alt="condition icon" width="50" height="50">
-                        <span class="conditon">Sunny</span>
+                        <img src="./src/img/sun.png" alt="condition icon" width="50" height="50" class="icon">
+                        <span class="condition">Sunny</span>
                     </div>
                 </div>
             </div>
@@ -62,7 +57,7 @@
                     </li>
                     <li>
                         <span>Wind:</span>
-                        <span class="humidity">24km/h</span>
+                        <span class="wind">24km/h</span>
                     </li>
                 </ul>
             </div>
